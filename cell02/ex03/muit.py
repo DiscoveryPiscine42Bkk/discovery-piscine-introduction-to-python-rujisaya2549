@@ -1,4 +1,5 @@
 value = int(input())
+
 if value > 0:
 	print("This number is positive.")
 elif value < 0:
