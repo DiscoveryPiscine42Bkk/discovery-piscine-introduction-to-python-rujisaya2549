@@ -40,7 +40,7 @@ def can_attack(board, piece_row, piece_col, king_row, king_col, piece):
         if piece_row + 1 == king_row and abs(piece_col - king_col) == 1:
             return True
     
-    elif piece == 'R':  
+    elif piece == 'R':
         if piece_row == king_row or piece_col == king_col:
             return is_clear_path(board, piece_row, piece_col, king_row, king_col)
     
@@ -49,7 +49,7 @@ def can_attack(board, piece_row, piece_col, king_row, king_col, piece):
             return is_clear_path(board, piece_row, piece_col, king_row, king_col)
     
     elif piece == 'Q':  
-        if (piece_row == king_row or piece_col == king_col or 
+       if (piece_row == king_row or piece_col == king_col or 
             abs(piece_row - king_row) == abs(piece_col - king_col)):
             return is_clear_path(board, piece_row, piece_col, king_row, king_col)
     
@@ -74,7 +74,6 @@ def is_clear_path(board, start_row, start_col, end_row, end_col):
         curr_col += dc
     
     return True
-
 
 if __name__ == "__main__":
     board1 = [
